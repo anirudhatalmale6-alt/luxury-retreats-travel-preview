@@ -1,0 +1,215 @@
+/* Luxury Retreats Travel — design preview
+   Palette: her existing cream, plus the pink and black she sent. */
+:root{
+  --cream:#D6C9AA;          /* the cream already on her site */
+  --paper:#F4EFE4;          /* lighter version of it, for airy sections */
+  --ink:#15151A;            /* the black */
+  --ink-soft:#2A2A33;
+  --pink:#DB2F6D;           /* the pink */
+  --pink-deep:#B31F55;
+  --pink-mist:#F9E2EC;
+  --line:rgba(21,21,26,.14);
+  --shadow:0 18px 50px -22px rgba(21,21,26,.45);
+  --shadow-sm:0 6px 18px -10px rgba(21,21,26,.4);
+  --serif:"Bodoni Moda",Georgia,serif;
+  --sans:"Jost",-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:600;line-height:1.06;letter-spacing:-.01em}
+h1{font-size:clamp(40px,6.4vw,80px)}
+h2{font-size:clamp(31px,4.1vw,50px)}
+h3{font-size:22px}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--pink)}
+.eyebrow.on-dark{color:var(--cream)}
+.lead{font-size:18.5px;color:#4A4A55;max-width:62ch}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px 30px;border-radius:2px;
+     font-size:13px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;border:1px solid transparent;
+     transition:.22s ease;cursor:pointer;white-space:nowrap}
+.btn-pink{background:var(--pink);color:#fff}
+.btn-pink:hover{background:var(--pink-deep)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--pink)}
+.btn-out{border-color:currentColor}
+.btn-out:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-out.light{color:#fff}
+.btn-out.light:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn-sm{padding:11px 20px;font-size:11.5px}
+
+/* ---------- top strip + header ---------- */
+.topbar{background:var(--ink);color:rgba(255,255,255,.82);font-size:12.5px;letter-spacing:.08em}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:10px;padding-bottom:10px}
+.topbar b{color:var(--pink);font-weight:500}
+.topbar .tb-right{display:flex;gap:20px}
+
+header{position:sticky;top:0;z-index:70;background:rgba(244,239,228,.93);backdrop-filter:blur(11px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
+.brand img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--pink)}
+.brand span{font-family:var(--serif);font-size:19px;line-height:1.12;font-weight:600;letter-spacing:.01em}
+.brand span i{display:block;font-family:var(--sans);font-style:normal;font-size:9.5px;letter-spacing:.3em;color:var(--pink);text-transform:uppercase;margin-top:3px}
+.navlinks{display:flex;gap:30px;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase}
+.navlinks a{position:relative;padding:5px 0}
+.navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--pink);transition:.25s}
+.navlinks a:hover::after,.navlinks a.on::after{width:100%}
+.navlinks a.on{color:var(--pink)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:2px;padding:9px 12px;font-size:17px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(21,21,26,.9) 0%,rgba(21,21,26,.45) 45%,rgba(21,21,26,.25) 100%)}
+.hero .wrap{position:relative;padding-bottom:74px;padding-top:110px}
+.hero h1{max-width:15ch;margin:16px 0 18px}
+.hero h1 em{font-style:italic;color:var(--pink)}
+.hero p{max-width:52ch;color:rgba(255,255,255,.9);font-size:19px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+
+/* ---------- trust strip ---------- */
+.trust{background:var(--ink);color:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding-top:30px;padding-bottom:30px}
+.trust div{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,.78);line-height:1.42}
+.trust b{display:block;color:#fff;font-size:14.5px;font-weight:500;letter-spacing:.04em;margin-bottom:2px}
+.trust .ic{color:var(--pink);font-size:19px;line-height:1.2}
+
+/* ---------- sections ---------- */
+section{padding:88px 0}
+.sec-head{max-width:66ch;margin-bottom:44px}
+.sec-head h2{margin:12px 0 14px}
+.center{text-align:center;margin-left:auto;margin-right:auto}
+.on-cream{background:var(--cream)}
+.on-ink{background:var(--ink);color:#fff}
+.on-ink .lead{color:rgba(255,255,255,.72)}
+.rule{width:56px;height:2px;background:var(--pink);margin:20px 0}
+.center .rule{margin-left:auto;margin-right:auto}
+
+/* ---------- trip cards ---------- */
+.trips{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.trip{background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;
+      box-shadow:var(--shadow-sm);transition:.25s}
+.trip:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.trip-img{position:relative;aspect-ratio:4/3;background:var(--cream)}
+.trip-img img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:14px;left:14px;background:var(--pink);color:#fff;font-size:10.5px;letter-spacing:.18em;
+     text-transform:uppercase;padding:7px 13px;border-radius:2px;font-weight:500}
+.tag.ink{background:var(--ink)}
+.trip-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.trip-body .when{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:9px}
+.trip-body h3{margin-bottom:10px}
+.trip-body p{font-size:15px;color:#55555F;flex:1}
+.incl{list-style:none;margin:15px 0 0;font-size:14px;color:#42424C}
+.incl li{padding-left:20px;position:relative;margin-bottom:5px}
+.incl li::before{content:"✓";position:absolute;left:0;color:var(--pink);font-weight:700}
+.price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-top:20px;
+           padding-top:18px;border-top:1px solid var(--line)}
+.price{font-family:var(--serif);font-size:31px;line-height:1}
+.price small{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;
+             color:#6C6C77;margin-top:5px}
+.dep{background:var(--pink-mist);border-left:3px solid var(--pink);padding:11px 14px;margin-top:16px;font-size:13.5px}
+.dep b{color:var(--pink-deep)}
+.trip .btn{margin-top:16px;width:100%}
+
+/* ---------- ladies band ---------- */
+.ladies{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.ladies::before{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(219,47,109,.55),transparent 68%)}
+.ladies .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.ladies h2{margin:14px 0 18px}
+.ladies h2 em{font-style:italic;color:var(--pink)}
+.ladies p{color:rgba(255,255,255,.78);max-width:52ch}
+.ladies-pts{list-style:none;margin:26px 0 32px}
+.ladies-pts li{padding-left:30px;position:relative;margin-bottom:13px;color:rgba(255,255,255,.9);font-size:15.5px}
+.ladies-pts li::before{content:"♥";position:absolute;left:0;color:var(--pink)}
+.ladies-art{position:relative}
+.ladies-art img{border-radius:3px;box-shadow:var(--shadow)}
+.ladies-art .float{position:absolute;bottom:-26px;left:-26px;background:var(--pink);color:#fff;padding:20px 24px;
+  border-radius:3px;max-width:230px;box-shadow:var(--shadow)}
+.ladies-art .float b{font-family:var(--serif);font-size:27px;display:block;line-height:1}
+.ladies-art .float span{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------- destinations ---------- */
+.dest{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dest a{position:relative;aspect-ratio:3/4;overflow:hidden;border-radius:3px;display:block;background:var(--ink)}
+.dest img{width:100%;height:100%;object-fit:cover;transition:.55s}
+.dest a:hover img{transform:scale(1.07)}
+.dest a::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(21,21,26,.85),transparent 58%)}
+.dest span{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fff;font-family:var(--serif);font-size:21px}
+.dest span i{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.16em;
+             text-transform:uppercase;color:var(--cream);margin-top:4px}
+
+/* ---------- how it works ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:s}
+.step{position:relative;padding-top:22px;border-top:2px solid var(--pink)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-size:46px;color:var(--pink);
+  display:block;line-height:1;margin-bottom:12px}
+.step h3{margin-bottom:9px}
+.step p{font-size:15.5px;color:#55555F}
+.on-ink .step p{color:rgba(255,255,255,.72)}
+
+/* ---------- testimonials ---------- */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quote{background:#fff;border:1px solid var(--line);padding:30px;border-radius:3px}
+.quote p{font-family:var(--serif);font-size:19px;line-height:1.45;font-style:italic;margin-bottom:18px}
+.quote .who{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink)}
+.stars{color:var(--pink);letter-spacing:3px;margin-bottom:14px;font-size:14px}
+
+/* ---------- enquiry ---------- */
+.enq{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.form{background:#fff;padding:34px;border-radius:3px;box-shadow:var(--shadow-sm);border:1px solid var(--line)}
+.form label{display:block;font-size:12px;letter-spacing:.13em;text-transform:uppercase;margin:0 0 6px;font-weight:500}
+.form input,.form select,.form textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:2px;
+  font-family:var(--sans);font-size:15px;margin-bottom:16px;background:#FCFAF6;outline:none}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--pink)}
+.form .btn{width:100%}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:rgba(255,255,255,.68);padding:70px 0 0;font-size:14.5px}
+.fcols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:40px}
+footer h5{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px;font-weight:500}
+footer a{display:block;margin-bottom:9px;transition:.2s}
+footer a:hover{color:var(--pink)}
+.fbrand{font-family:var(--serif);font-size:24px;color:#fff;margin-bottom:12px}
+.fbot{border-top:1px solid rgba(255,255,255,.13);margin-top:52px;padding:22px 0;text-align:center;font-size:13px;
+      color:rgba(255,255,255,.45)}
+.socials{display:flex;gap:12px;margin-top:16px}
+.socials a{width:38px;height:38px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:flex;
+  align-items:center;justify-content:center;margin:0;font-size:15px}
+.socials a:hover{background:var(--pink);border-color:var(--pink);color:#fff}
+
+/* ---------- preview note ---------- */
+.pv{background:var(--pink);color:#fff;text-align:center;padding:11px 20px;font-size:13.5px;letter-spacing:.04em}
+.pv a{text-decoration:underline}
+
+@media(max-width:980px){
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trips,.quotes,.steps{grid-template-columns:1fr}
+  .dest{grid-template-columns:1fr 1fr}
+  .ladies .wrap,.enq{grid-template-columns:1fr;gap:40px}
+  .fcols{grid-template-columns:1fr 1fr}
+  .navlinks{display:none}
+  .burger{display:block}
+  /* brand + CTA + burger together overflow a phone, so the CTA folds into the menu */
+  .nav > .btn{display:none}
+  .brand img{width:46px;height:46px}
+  .brand span{font-size:17px}
+  .topbar .tb-right{display:none}
+  section{padding:62px 0}
+  .ladies-art .float{left:14px;bottom:-18px}
+}
+@media(max-width:560px){
+  .trust .wrap{grid-template-columns:1fr}
+  .dest{grid-template-columns:1fr}
+  .fcols{grid-template-columns:1fr}
+  .form .two{grid-template-columns:1fr}
+  .hero .wrap{padding-bottom:52px}
+}

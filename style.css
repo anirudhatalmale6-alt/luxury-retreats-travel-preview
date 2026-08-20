@@ -271,3 +271,34 @@ footer a:hover{color:var(--pink)}
   .flyer-wrap,.twocol{grid-template-columns:1fr;gap:30px}
 }
 @media(max-width:560px){ .gal{grid-template-columns:1fr} .tripfacts li{flex-direction:column;gap:4px} }
+
+/* ---------- hotels on a trip page ---------- */
+.hotels{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.hotelcard{background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.hotelcard > img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.hotelcard .hb{padding:26px;display:flex;flex-direction:column;flex:1}
+.hotelcard .wh{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:8px}
+.hotelcard h3{margin-bottom:10px}
+.hotelcard p{font-size:15px;color:#55555F}
+.hotelcard ul{list-style:none;margin:14px 0 0;font-size:14.5px;color:#42424C}
+.hotelcard ul li{padding-left:20px;position:relative;margin-bottom:6px}
+.hotelcard ul li::before{content:"✓";position:absolute;left:0;color:var(--pink);font-weight:700}
+.hstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:18px}
+.hstrip img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:2px}
+.nostrip{margin-top:18px;background:var(--paper);border:1px dashed var(--line);border-radius:2px;
+  padding:14px 16px;font-size:13.5px;color:#5A5A65;line-height:1.55}
+
+/* price band on a trip page */
+.priceband{background:var(--ink);color:#fff}
+.priceband .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  padding-top:34px;padding-bottom:34px}
+.priceband .big{font-family:var(--serif);font-size:52px;line-height:1;color:#fff}
+.priceband .big small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--pink);margin-top:8px}
+.priceband .pb-note{font-size:15px;color:rgba(255,255,255,.75);max-width:44ch;line-height:1.55}
+.priceband .pb-note b{color:#fff;font-weight:500}
+
+@media(max-width:980px){ .hotels{grid-template-columns:1fr} .priceband .big{font-size:42px} }
+.trips.two{grid-template-columns:repeat(2,1fr)}
+@media(max-width:980px){ .trips.two{grid-template-columns:1fr} }
+.pastwrap{margin-top:66px;padding-top:44px;border-top:1px solid var(--line)}

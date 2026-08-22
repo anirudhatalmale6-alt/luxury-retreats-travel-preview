@@ -77,7 +77,7 @@ header{position:sticky;top:0;z-index:70;background:rgba(244,239,228,.93);backdro
 /* ---------- trust strip ---------- */
 .trust{background:var(--ink);color:#fff}
 .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding-top:30px;padding-bottom:30px}
-.trust div{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,.78);line-height:1.42}
+.trust .wrap>div{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,.78);line-height:1.42}
 .trust b{display:block;color:#fff;font-size:14.5px;font-weight:500;letter-spacing:.04em;margin-bottom:2px}
 .trust .ic{color:var(--pink);font-size:19px;line-height:1.2}
 
@@ -135,23 +135,23 @@ section{padding:88px 0}
 .trip.sold .dep b{color:var(--ink)}
 .waitnote{font-size:12.5px;color:#6C6C77;text-align:center;margin-top:10px}
 
-/* ---------- ladies band ---------- */
-.ladies{background:var(--ink);color:#fff;position:relative;overflow:hidden}
-.ladies::before{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;
+/* ---------- group travel band ---------- */
+.gtband{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.gtband::before{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;
   background:radial-gradient(circle,rgba(219,47,109,.55),transparent 68%)}
-.ladies .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.ladies h2{margin:14px 0 18px}
-.ladies h2 em{font-style:italic;color:var(--pink)}
-.ladies p{color:rgba(255,255,255,.78);max-width:52ch}
-.ladies-pts{list-style:none;margin:26px 0 32px}
-.ladies-pts li{padding-left:30px;position:relative;margin-bottom:13px;color:rgba(255,255,255,.9);font-size:15.5px}
-.ladies-pts li::before{content:"♥";position:absolute;left:0;color:var(--pink)}
-.ladies-art{position:relative}
-.ladies-art img{border-radius:3px;box-shadow:var(--shadow)}
-.ladies-art .float{position:absolute;bottom:-26px;left:-26px;background:var(--pink);color:#fff;padding:20px 24px;
+.gtband .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.gtband h2{margin:14px 0 18px}
+.gtband h2 em{font-style:italic;color:var(--pink)}
+.gtband p{color:rgba(255,255,255,.78);max-width:52ch}
+.gt-pts{list-style:none;margin:26px 0 32px}
+.gt-pts li{padding-left:30px;position:relative;margin-bottom:13px;color:rgba(255,255,255,.9);font-size:15.5px}
+.gt-pts li::before{content:"✦";position:absolute;left:0;color:var(--pink)}
+.gt-art{position:relative}
+.gt-art img{border-radius:3px;box-shadow:var(--shadow)}
+.gt-art .float{position:absolute;bottom:-26px;left:-26px;background:var(--pink);color:#fff;padding:20px 24px;
   border-radius:3px;max-width:230px;box-shadow:var(--shadow)}
-.ladies-art .float b{font-family:var(--serif);font-size:27px;display:block;line-height:1}
-.ladies-art .float span{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.gt-art .float b{font-family:var(--serif);font-size:27px;display:block;line-height:1}
+.gt-art .float span{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 
 /* ---------- destinations ---------- */
 .dest{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -212,7 +212,7 @@ footer a:hover{color:var(--pink)}
   .trust .wrap{grid-template-columns:1fr 1fr}
   .trips,.quotes,.steps{grid-template-columns:1fr}
   .dest{grid-template-columns:1fr 1fr}
-  .ladies .wrap,.enq{grid-template-columns:1fr;gap:40px}
+  .gtband .wrap,.enq{grid-template-columns:1fr;gap:40px}
   .fcols{grid-template-columns:1fr 1fr}
   .navlinks{display:none}
   .burger{display:block}
@@ -222,7 +222,7 @@ footer a:hover{color:var(--pink)}
   .brand span{font-size:17px}
   .topbar .tb-right{display:none}
   section{padding:62px 0}
-  .ladies-art .float{left:14px;bottom:-18px}
+  .gt-art .float{left:14px;bottom:-18px}
 }
 @media(max-width:560px){
   .trust .wrap{grid-template-columns:1fr}

@@ -21,7 +21,12 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 26px}
 
-h1,h2,h3,.serif{font-family:var(--serif);font-weight:600;line-height:1.06;letter-spacing:-.01em}
+/* Bodoni Moda is a variable font with an optical-size axis. Left on auto the
+   browser winds it up to opsz 96 on display headings, and at that setting the
+   hairlines get so thin that the italic lowercase v loses its left stroke —
+   "Travel" reads as "Trarel". Pinning the optical size keeps the strokes solid. */
+h1,h2,h3,.serif{font-family:var(--serif);font-weight:600;line-height:1.06;letter-spacing:-.01em;
+  font-optical-sizing:none;font-variation-settings:"opsz" 16}
 h1{font-size:clamp(40px,6.4vw,80px)}
 h2{font-size:clamp(31px,4.1vw,50px)}
 h3{font-size:22px}
@@ -149,8 +154,8 @@ section{padding:88px 0}
 .gt-art{position:relative}
 .gt-art img{border-radius:3px;box-shadow:var(--shadow)}
 .gt-art .float{position:absolute;bottom:-26px;left:-26px;background:var(--pink);color:#fff;padding:20px 24px;
-  border-radius:3px;max-width:230px;box-shadow:var(--shadow)}
-.gt-art .float b{font-family:var(--serif);font-size:27px;display:block;line-height:1}
+  border-radius:3px;max-width:250px;box-shadow:var(--shadow)}
+.gt-art .float b{font-family:var(--serif);font-size:27px;display:block;line-height:1;white-space:nowrap}
 .gt-art .float span{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 
 /* ---------- destinations ---------- */

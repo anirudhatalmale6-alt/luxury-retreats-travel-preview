@@ -326,3 +326,5 @@ footer a:hover{color:var(--pink)}
   border-color:rgba(255,255,255,.22)}
 .pay-pair{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .pay-pair form{margin:0}
+.grouprate{margin-top:8px;font-size:14px;color:var(--pink);font-weight:500;
+  letter-spacing:.02em}

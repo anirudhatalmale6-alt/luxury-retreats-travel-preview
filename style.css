@@ -423,3 +423,7 @@ footer a:hover{color:var(--pink)}
   .clause{padding-left:0;padding-top:38px}
   .clause::before{top:0}
 }
+
+/* ABTA membership line in the footer bar */
+.fbot .abta{letter-spacing:.06em}
+.fbot .abta b{color:rgba(255,255,255,.82);font-weight:600}

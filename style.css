@@ -328,3 +328,98 @@ footer a:hover{color:var(--pink)}
 .pay-pair form{margin:0}
 .grouprate{margin-top:8px;font-size:14px;color:var(--pink);font-weight:500;
   letter-spacing:.02em}
+
+/* ---------- long-form pages: How booking works, Terms, Contact ---------- */
+/* Legal and explanatory copy needs a reading measure and real vertical rhythm.
+   The rest of the site is cards and bands; these three pages are prose. */
+.prose{max-width:74ch}
+.prose h3{margin:38px 0 12px;font-size:24px}
+.prose h3:first-child{margin-top:0}
+.prose p{font-size:16.5px;color:#4A4A55;line-height:1.72;margin-bottom:15px}
+.prose ul,.prose ol{margin:0 0 18px 0;padding-left:0;list-style:none}
+.prose li{position:relative;padding-left:22px;margin-bottom:9px;font-size:16px;color:#4A4A55;line-height:1.65}
+.prose ul li::before{content:"\2726";position:absolute;left:0;color:var(--pink)}
+.prose ol{counter-reset:pl}
+.prose ol li::before{counter-increment:pl;content:counter(pl) ".";position:absolute;left:0;color:var(--pink);font-weight:600}
+.prose b,.prose strong{color:var(--ink);font-weight:500}
+.prose a{color:var(--pink);text-decoration:underline}
+.on-ink .prose p,.on-ink .prose li{color:rgba(255,255,255,.74)}
+.on-ink .prose b{color:#fff}
+
+/* numbered clauses down the left, like a contract */
+.clauses{counter-reset:cl}
+.clause{position:relative;padding:0 0 30px 62px;margin-bottom:30px;border-bottom:1px solid var(--line)}
+.clause:last-child{border-bottom:none;margin-bottom:0}
+.clause::before{counter-increment:cl;content:counter(cl,decimal-leading-zero);
+  position:absolute;left:0;top:-4px;font-family:var(--serif);font-size:30px;color:var(--pink);line-height:1}
+.clause h3{margin:0 0 10px;font-size:21px}
+.clause p{font-size:15.5px;color:#4A4A55;line-height:1.7;margin-bottom:11px}
+.clause p:last-child{margin-bottom:0}
+.clause ul{list-style:none;margin:12px 0 0}
+.clause ul li{position:relative;padding-left:22px;margin-bottom:8px;font-size:15.5px;color:#4A4A55;line-height:1.6}
+.clause ul li::before{content:"\2726";position:absolute;left:0;color:var(--pink)}
+
+/* the "on this page" jump list */
+.toc{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--pink);
+  border-radius:3px;padding:24px 26px;margin-bottom:48px}
+.toc h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);
+  font-weight:500;margin-bottom:14px}
+.toc ol{list-style:none;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:7px 30px;counter-reset:t}
+.toc li{font-size:14.5px}
+.toc a{color:#4A4A55}
+.toc a:hover{color:var(--pink)}
+.toc li::before{counter-increment:t;content:counter(t,decimal-leading-zero) "  ";color:var(--pink);font-size:12px}
+
+/* a highlighted fact box inside prose */
+.note{background:var(--pink-mist);border-left:3px solid var(--pink);padding:18px 22px;
+  border-radius:2px;margin:22px 0;font-size:15.5px;color:#3C3C46;line-height:1.65}
+.note b{display:block;color:var(--pink-deep);font-weight:600;margin-bottom:5px}
+.note p{font-size:15.5px;margin-bottom:0}
+.note.plain{background:var(--paper);border-left-color:var(--ink)}
+.note.plain b{color:var(--ink)}
+
+/* money timeline on the booking page */
+.timeline{list-style:none;margin:0;position:relative;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:var(--line)}
+.timeline li{position:relative;margin-bottom:30px}
+.timeline li:last-child{margin-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-34px;top:6px;width:15px;height:15px;
+  border-radius:50%;background:#fff;border:2px solid var(--pink)}
+.timeline .tl-when{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
+.timeline h3{font-size:20px;margin-bottom:8px}
+.timeline p{font-size:15.5px;color:#55555F;line-height:1.65}
+.on-ink .timeline::before{background:rgba(255,255,255,.2)}
+.on-ink .timeline li::before{background:var(--ink)}
+.on-ink .timeline p{color:rgba(255,255,255,.72)}
+
+/* contact page: the three ways to reach her */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.way{background:#fff;border:1px solid var(--line);border-top:3px solid var(--pink);
+  border-radius:3px;padding:28px}
+.way .ic{font-size:23px;color:var(--pink);line-height:1;margin-bottom:14px;display:block}
+.way h3{font-size:20px;margin-bottom:9px}
+.way p{font-size:15px;color:#55555F;line-height:1.6}
+.way .val{margin-top:12px;font-size:15.5px;color:var(--ink);font-weight:500;word-break:break-word}
+
+/* destinations page: one strip per place */
+.place{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+  padding:44px 0;border-bottom:1px solid var(--line)}
+.place:last-child{border-bottom:none}
+.place:nth-child(even) .place-img{order:-1}
+.place-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;box-shadow:var(--shadow-sm)}
+.place h3{font-size:30px;margin:12px 0 12px}
+.place p{font-size:16px;color:#4A4A55;line-height:1.7}
+.place .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.place .tags span{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:2px;padding:6px 11px;color:#5A5A65}
+.place .btn{margin-top:22px}
+
+@media(max-width:980px){
+  .ways{grid-template-columns:1fr}
+  .toc ol{grid-template-columns:1fr}
+  .place,.place:nth-child(even) .place-img{grid-template-columns:1fr;gap:26px;order:0}
+}
+@media(max-width:560px){
+  .clause{padding-left:0;padding-top:38px}
+  .clause::before{top:0}
+}
